@@ -5,6 +5,7 @@ Ludum24page::Application.routes.draw do
 
   get "static_pages/download"
 
+  get "static_pages/legal"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

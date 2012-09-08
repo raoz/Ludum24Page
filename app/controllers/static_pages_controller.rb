@@ -7,4 +7,6 @@ class StaticPagesController < ApplicationController
 
   def download
   end
+  def legal
+  end
 end
