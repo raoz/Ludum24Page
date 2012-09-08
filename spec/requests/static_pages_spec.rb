@@ -10,8 +10,12 @@ describe "Static pages" do
 		end
 		it "should have the correct title" do
 			visit '/static_pages/home'
-			page.should have_selector('title', :text => "Evil Tests - Home")
+			page.should have_selector('title', :text => "Evil Tests")
 		end
+		it "should not have a custom title" do
+      visit '/static_pages/home'
+      page.should_not have_selector('title', :text => "- Home")
+    end
 	end
 	describe "Help page" do
 		
@@ -22,7 +26,7 @@ describe "Static pages" do
 		it "should have the correct title" do
 			visit '/static_pages/help'
 			page.should have_selector('title', :text => "Evil Tests - Help")
-		end
+		end		
    end
    describe "Download page" do
 		it "should have the h1 'Download'" do
